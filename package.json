@@ -1,6 +1,9 @@
 {
   "name": "todo_project",
   "version": "1.0.0",
+  "engines":{
+    "node":">=23 <24"
+  },
   "description": "",
   "license": "ISC",
   "author": "",
