@@ -1,0 +1,33 @@
+/*
+ *   Copyright (c) 2025 
+ *   All rights reserved.
+ */
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: darkslategrey;
+    margin-bottom: 0.2rem;
+}
+h2{
+    color:white
+}
+a{
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.2rem;
+    
+}
+h2:hover{
+    color: darkmagenta;
+    font-size: 1.7rem;
+    cursor: pointer;
+    transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+a:hover{
+    color: darkmagenta;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+}

@@ -1,0 +1,30 @@
+/*
+ *   Copyright (c) 2025 
+ *   All rights reserved.
+ */
+.todo-form {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  
+  .todo-form input[type="text"] {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 5px;
+  }
+  
+  .todo-form button {
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .todo-form button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }

@@ -1,0 +1,30 @@
+<div class="container">
+<h2>تعديل المهمة</h2>
+<form [formGroup]="todoForm" (ngSubmit)="updateTodo()">
+  <div class="todo-title">
+    <label for="title">Title:</label>
+    <input type="text" id="title" formControlName="title" required>
+    <div *ngIf="todoForm.controls['title'].invalid && (todoForm.controls['title'].dirty || todoForm.controls['title'].touched)">
+      <div *ngIf="todoForm.controls['title'].errors?.['required']">
+        Title is required.
+      </div>
+    </div>
+  </div>
+  <div class="description">
+    <label for="description">Description:</label>
+    <textarea id="description" formControlName="description"></textarea>
+  </div>
+  <div class="status">
+    <label for="status">Status:</label>
+    <select class= "status-val" id="status" formControlName="status">
+      <option value="To Do">To Do</option>
+      <option value="Done">Done</option>
+    </select>
+  </div>
+  <div class="buttons">
+    <button type="submit" [disabled]="todoForm.invalid">Save</button>
+  <button type="button" (click)="cancel()">Cancel</button>
+  </div>
+  
+</form>
+</div>

@@ -1,0 +1,43 @@
+<div>
+  
+  <div *ngIf="loggedInUserName">
+    <h2 class="title_h2">{{ loggedInUserName }}</h2>
+    <h2> المهام</h2>
+ 
+  <ul *ngIf="todos.length > 0; else noTodos">
+    <li *ngFor="let todo of todos | filter: { status: 'To Do' }">
+      <input
+        type="checkbox"
+        [checked]="isDone(todo)"
+        (change)="updateStatus(todo, isDone(todo) ? 'To Do' : 'Done')"
+      />
+      <span>{{ todo.title }}</span>
+      <p *ngIf="todo.description">
+        {{ todo.description.length > 50 ? todo.description.substring(0, 50) + '...' : todo.description }}
+      </p>
+      <button (click)="editTodo(todo)">✏️</button>
+      <button (click)="deleteTodo(todo._id)">🗑️</button>
+    </li>
+  </ul>
+  <ng-template #noTodos>
+    <p>لا توجد مهام حتى الآن.</p>
+  </ng-template>
+
+  <h2 *ngIf="(todos | filter: { status: 'Done' }).length > 0">المهام المكتملة</h2>
+  <ul *ngIf="(todos | filter: { status: 'Done' }).length > 0">
+    <li *ngFor="let todo of todos | filter: { status: 'Done' }">
+      <input
+        type="checkbox"
+        [checked]="isDone(todo)"
+        (change)="updateStatus(todo, isDone(todo) ? 'To Do' : 'Done')"
+      />
+      <span>{{ todo.title }}</span>
+       <p *ngIf="todo.description">
+        {{ todo.description.length > 50 ? todo.description.substring(0, 50) + '...' : todo.description }}
+      </p>
+      <button (click)="editTodo(todo)">✏️</button>
+      <button (click)="deleteTodo(todo._id)">🗑️</button>
+    </li>
+  </ul>
+  </div>
+</div>

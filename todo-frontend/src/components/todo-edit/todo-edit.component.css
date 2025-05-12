@@ -1,0 +1,85 @@
+/*
+ *   Copyright (c) 2025 
+ *   All rights reserved.
+ */
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 1px solid #742929;
+}
+h2{
+    position: relative;
+    display: flex;
+    width: 100%;
+    background-color: #744949;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+form{
+    position: relative;
+    display: flex;
+    padding: auto;
+    flex-direction: column;
+    margin: 0;
+    justify-content: flex-start;
+}
+.todo-title{
+   display: flex;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+label{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color:#744949;
+    width: 150px;
+}
+#title{
+    text-align: center;
+    width: 300px;
+    border-radius: .5rem;
+}
+.description{
+    display: flex;
+}
+textarea{
+    width: 300px;
+    padding: .7rem;
+    height: 180px;
+    text-align: center;
+    border-radius: .5rem;
+}
+.status{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    justify-items:center;
+}
+select{
+    width: 300px;
+    text-align: center;
+    border-radius: .5rem;
+}
+.buttons{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+}
+button{
+    background-color: #742929;
+    border-radius: 1.1rem;
+    color: aliceblue;
+    min-width: 100px;
+}

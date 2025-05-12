@@ -1,0 +1,4 @@
+<div class="todo-form">
+    <input type="text" placeholder="Enter text..." [formControl]="todoForm.controls['title']">
+    <button (click)="onSubmit()" [disabled]="!todoForm.valid">Add</button>
+  </div>
